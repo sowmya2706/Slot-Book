@@ -1,0 +1,57 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.logo-icon { font-size: 1.4rem; color: var(--accent); }
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+
+.breadcrumb { display: flex; align-items: center; gap: 0.4rem; }
+.crumb {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color 0.15s;
+}
+.crumb.active { color: var(--accent); font-weight: 700; }
+.crumb.done { color: var(--text-secondary); }
+.crumb-sep { color: var(--text-muted); font-size: 0.7rem; }
+
+.admin-link {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.admin-link:hover { border-color: var(--accent); color: var(--accent); }

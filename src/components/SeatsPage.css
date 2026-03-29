@@ -1,0 +1,96 @@
+/* src/components/SeatsPage.css */
+.seats-page { padding: 0 0 6rem; }
+
+.seats-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.back-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: var(--text-muted);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.back-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.show-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+}
+.show-badge-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.show-badge-meta { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.1rem; }
+
+.seats-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  min-height: calc(100vh - 160px);
+}
+@media (max-width: 768px) {
+  .seats-layout { grid-template-columns: 1fr; }
+}
+
+.sidebar {
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.main-area {
+  padding: 1.5rem 2rem;
+  overflow-x: auto;
+}
+
+.slot-info-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  padding: 0.6rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: inline-flex;
+}
+.slot-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+.slot-sep { color: var(--text-muted); }
+.slot-time {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.no-slot-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 300px;
+  gap: 1rem;
+  color: var(--text-muted);
+}
+.no-slot-placeholder span { font-size: 3rem; opacity: 0.4; }
+.no-slot-placeholder p { font-size: 0.9rem; }

@@ -1,0 +1,128 @@
+/* src/components/BookingSuccess.css */
+.success-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 2rem;
+}
+.success-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+.success-icon {
+  width: 60px; height: 60px;
+  background: #10b98122;
+  border: 2px solid #10b981;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: pop 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes pop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.success-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+.success-subtitle { color: var(--text-muted); font-size: 0.9rem; margin: 0 0 2rem; }
+
+.booking-ref {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 2rem;
+}
+.ref-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ref-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.ticket-strip {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.ticket-row {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px dashed var(--border);
+}
+.ticket-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+.ticket-detail { display: flex; flex-direction: column; gap: 0.2rem; }
+.td-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ticket-detail span:last-child { font-size: 0.85rem; color: var(--text-primary); }
+
+.success-email-note { font-size: 0.8rem; color: var(--text-muted); margin: 0 0 2rem; }
+.success-email-note strong { color: var(--text-secondary); }
+
+.success-actions { display: flex; gap: 1rem; flex-direction: column; }
+.home-btn {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.home-btn:hover { opacity: 0.85; }
+.admin-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: var(--text-secondary);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.admin-btn:hover { border-color: var(--accent); color: var(--accent); }

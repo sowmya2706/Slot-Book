@@ -1,0 +1,89 @@
+/* src/components/Home.css */
+.home { padding: 0 0 4rem; }
+
+.home-hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+.home-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.home-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+.home-title em { color: var(--accent); font-style: italic; }
+.home-sub { color: var(--text-muted); font-size: 1rem; }
+
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.show-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.show-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.show-poster {
+  background: var(--surface);
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  border-bottom: 1px solid var(--border);
+}
+.show-info { padding: 1.2rem 1.2rem 0.5rem; flex: 1; }
+.show-rating {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: #f59e0b;
+  margin-bottom: 0.4rem;
+}
+.show-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.3rem;
+}
+.show-meta { color: var(--text-muted); font-size: 0.82rem; margin: 0; }
+.show-cta {
+  padding: 0.8rem 1.2rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.show-card:hover .show-cta { background: rgba(234,179,8,0.08); }
